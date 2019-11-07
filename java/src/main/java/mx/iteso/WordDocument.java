@@ -1,16 +1,21 @@
 package mx.iteso;
 
 import mx.iteso.adapter.IWordDocument;
-import mx.iteso.adapter.MSLicense;
+import mx.iteso.utils.MSLicense;
+import mx.iteso.utils.Format;
 import mx.iteso.utils.Image;
 
 public class WordDocument implements IWordDocument {
-    private Object format;
+    private Format format;
     private Image background;
     private float msOfficeVersion;
     private MSLicense msLicense;
 
-    public Object getFormat() {
+    public WordDocument(final int msLicenseNumber) {
+        this.msLicense = new MSLicense(msLicenseNumber);
+    }
+
+    public Format getFormat() {
         return this.format;
     }
 
@@ -18,7 +23,15 @@ public class WordDocument implements IWordDocument {
         return this.background;
     }
 
-    public void setMSOfficeVersion(float newMsOfficeVersion) {
+    /**
+     * Get Office version.
+     * @return the msOfficeVersion.
+     */
+    public float getMsOfficeVersion() {
+        return msOfficeVersion;
+    }
+
+    public void setMSOfficeVersion(final float newMsOfficeVersion) {
         this.msOfficeVersion = newMsOfficeVersion;
     }
 
@@ -27,7 +40,7 @@ public class WordDocument implements IWordDocument {
     }
 
     public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense) {
-        return msLicense.isInvalid();
+        return !this.msLicense.isValid();
     }
     
 }
