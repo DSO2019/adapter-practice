@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestDriveAdapters",
+            "request": "launch",
+            "mainClass": "mx.iteso.adapter.impl.TestDriveAdapters",
+            "projectName": "iteso"
+        }
+    ]
+}
