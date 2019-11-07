@@ -1,13 +1,14 @@
-package mx.iteso.adapter;
-
-import javafx.scene.layout.BackgroundImage;
+package mx.iteso.interfaces;
 
 import java.awt.*;
+import mx.iteso.beans.BackgroundImage;
+import mx.iteso.beans.Format;
 
 public interface IGoogleDoc {
     public Font getFont();
-    public Object getStyle();
+    public Format getStyle();
     public BackgroundImage getBackground();
     public void setSharingPermissions(int SharingPermissions);
+    public int getSharingPermissions();
 }
 
