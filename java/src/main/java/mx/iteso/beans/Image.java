@@ -1,14 +1,21 @@
 package mx.iteso.beans;
 
-public class Image{
+/** Image class. */
+public class Image {
+    /** Image address. */
     private String url;
 
-    public Image(String incomingUrl){
+    /** Constructor.
+     * @param incomingUrl the image url.
+    */
+    public Image(final String incomingUrl) {
         this.url = incomingUrl;
     }
 
-    public String getUrl(){
+    /** Url getter.
+     * @return image address url.
+     */
+    public String getUrl() {
         return this.url;
     }
-
 }

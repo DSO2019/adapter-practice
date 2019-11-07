@@ -1,18 +1,26 @@
 package mx.iteso.beans;
 
-public class BackgroundImage{
+/** Background Image class. */
+public class BackgroundImage {
+    /** The current image contained. */
     private Image image;
 
-    public BackgroundImage(){
+    /** Constructor. */
+    public BackgroundImage() {
         this.image = new Image("image.png");
     }
 
-    public BackgroundImage(Image img){
+    /** Constructor with image param.
+     * @param img Image to be set.
+     */
+    public BackgroundImage(final Image img) {
         this.image = img;
     }
 
-    public Image getImage(){
+    /** Image getter.
+     * @return the current image.
+     */
+    public Image getImage() {
         return this.image;
     }
-
 }

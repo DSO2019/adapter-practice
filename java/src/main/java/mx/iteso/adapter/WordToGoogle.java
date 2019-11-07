@@ -1,35 +1,58 @@
 package mx.iteso.adapter;
 
-import java.awt.*;
-import mx.iteso.interfaces.*;
+import java.awt.Font;
+import mx.iteso.interfaces.IGoogleDoc;
+import mx.iteso.interfaces.IWordDocument;
 import mx.iteso.beans.Format;
+import mx.iteso.beans.MSLicense;
 import mx.iteso.beans.BackgroundImage;
 
-public class WordToGoogle implements IGoogleDoc{
+/** Word to Google Adapter. */
+public class WordToGoogle implements IGoogleDoc {
 
-    IWordDocument wordDocument;
-    public Font getFont(){
+    /** Word Document to be adapted. */
+    private IWordDocument wordDocument;
+
+    /** Font getter.
+     * @return the actual Font.
+     */
+    public Font getFont() {
         return wordDocument.getFormat().getFont();
     }
 
-    public Format getStyle(){
+    /**
+     * Style getter.
+     * @return the current Format.
+     */
+    public Format getStyle() {
         return wordDocument.getFormat();
     }
 
-    public BackgroundImage getBackground(){
+    /**
+     * Background getter.
+     * @return Background Image.
+     */
+    public BackgroundImage getBackground() {
         return new BackgroundImage(wordDocument.getBackground());
     }
-    
-    public void setSharingPermissions(int sharedPermissionNumber){
+
+    /** Sharing permissions setter.
+     * @param sharedPermissionNumber permission id.
+    */
+    public void setSharingPermissions(final int sharedPermissionNumber) {
         return;
     }
 
-    public int getSharingPermissions(){
-        if(wordDocument.restrictEditIfLicenseIsInvalid(wordDocument.getLicense())){
+    /**
+     * Sharing permissions getter.
+     * @return permission id.
+     */
+    public int getSharingPermissions() {
+        final MSLicense license = wordDocument.getLicense();
+        if (wordDocument.restrictEditIfLicenseIsInvalid(license)) {
             return 0;
-        }else{
+        } else {
             return 1;
         }
     }
 }
-

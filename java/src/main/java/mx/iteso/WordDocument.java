@@ -1,55 +1,98 @@
 package mx.iteso;
 
-
 import mx.iteso.interfaces.IWordDocument;
 import mx.iteso.beans.Format;
 import mx.iteso.beans.Image;
 import mx.iteso.beans.MSLicense;
 
+/** Word Document class. */
 public class WordDocument implements IWordDocument {
-    Format format;
-    Image background;
-    float msOfficeVersion;
-    MSLicense license;
+    /** Document format. */
+    private Format format;
+    /** Background image. */
+    private Image background;
+    /** Version. */
+    private float msOfficeVersion;
+    /** MSLicense. */
+    private MSLicense license;
 
-    public WordDocument(int licenseNum) {
+    /** Constructor.
+     * @param licenseNum license number.
+    */
+    public WordDocument(final int licenseNum) {
         this.license = new MSLicense(licenseNum);
     }
 
+    /**
+     * Format getter.
+     * @return the current format.
+     */
     public Format getFormat() {
         return this.format;
     }
 
-    public void setFormat(Format selectedFormat) {
+    /**
+     * Format setter.
+     * @param selectedFormat current Format.
+     */
+    public void setFormat(final Format selectedFormat) {
         this.format = selectedFormat;
     }
 
+    /**
+     * Background image getter.
+     * @return the current background.
+     */
     public Image getBackground() {
         return this.background;
     }
 
-    public void setBackground(Image img) {
+    /**
+     * Background image setter.
+     * @param img the current Image.
+     */
+    public void setBackground(final Image img) {
         this.background = img;
     }
 
+    /**
+     * MSOffice version getter.
+     * @return msOfficeVersion.
+     */
     public float getMSOfficeVersion() {
         return this.msOfficeVersion;
     }
 
-    public void setMSOfficeVersion(float newMsOfficeVersion) {
+    /**
+     * MSOffice version setter.
+     * @param newMsOfficeVersion the version.
+     */
+    public void setMSOfficeVersion(final float newMsOfficeVersion) {
         this.msOfficeVersion = newMsOfficeVersion;
     }
 
-    public MSLicense getLicense(){
+    /**
+     * License getter.
+     * @return the current MsLicense.
+     */
+    public MSLicense getLicense() {
         return this.license;
     }
 
-    public void setLicense(MSLicense lic){
+    /**
+     * License setter.
+     * @param lic the current MsLicense.
+     */
+    public void setLicense(final MSLicense lic) {
         this.license = lic;
     }
 
-    /** Returns if restriction is needed. */
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense) {
+    /**
+     * Restrict edit evaluation.
+     * @param msLicense the current license.
+     * @return if permission should be restricted.
+     */
+    public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
         return !this.license.isValid();
     }
 }
