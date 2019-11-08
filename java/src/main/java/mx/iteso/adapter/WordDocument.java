@@ -30,7 +30,7 @@ public class WordDocument implements IWordDocument {
         this.font = new Font("Verdana");
         this.msLicense = new MSLicense("MS License");
         this.format = new Format(this.font, "Bold");
-        this.backgroundImage = new BackgroundImg(new Img("imageUrl"));
+        this.backgroundImage = new BackgroundImg(new Img("SoyUnaUrl"));
     }
     /**
      * @return getFormat.

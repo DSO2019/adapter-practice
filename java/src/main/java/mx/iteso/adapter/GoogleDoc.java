@@ -24,7 +24,7 @@ public class GoogleDoc implements IGoogleDoc {
      */
     public GoogleDoc() {
         this.font = new Font("Verdana");
-        this.backgroundImage = new BackgroundImg(new Img("imageUrl"));
+        this.backgroundImage = new BackgroundImg(new Img("SoyUnaUrl"));
         this.style = new Format(this.font, "Regular");
         this.sharingPermissions = 1;
     }
