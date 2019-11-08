@@ -1,6 +1,7 @@
 package mx.iteso.adapter;
 
 /** Word to GoogleDoc.*/
+
 public class GoogleAdapter implements IWordDocument {
 
     /** Google.*/

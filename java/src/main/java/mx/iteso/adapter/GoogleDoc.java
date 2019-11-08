@@ -1,6 +1,8 @@
 package mx.iteso.adapter;
 
-/** GoogleDoc.*/
+/**
+ * GoogleDoc.
+ */
 public class GoogleDoc implements IGoogleDoc {
 
     /** sharing permissions.*/

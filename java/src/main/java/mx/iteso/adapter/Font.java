@@ -6,7 +6,7 @@ public class Font {
     /** Font.*/
     private String font;
 
-    /** @param font .*/
+    /** @param fnt .*/
     public Font(final String fnt) {
         this.font = fnt;
     }
