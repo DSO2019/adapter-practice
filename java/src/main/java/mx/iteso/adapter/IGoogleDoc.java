@@ -1,13 +1,29 @@
 package mx.iteso.adapter;
 
-import javafx.scene.layout.BackgroundImage;
-
-import java.awt.*;
-
+/**
+ * Creado por Lucifer.
+ */
 public interface IGoogleDoc {
-    public Font getFont();
-    public Object getStyle();
-    public BackgroundImage getBackground();
-    public void setSharingPermissions(int SharingPermissions);
+
+    /**
+     * @return Font.
+     */
+    Font getFont();
+
+    /**
+     * @return Style.
+     */
+    Object getStyle();
+
+    /**
+     * @return background.
+     */
+    BackgroundImage getBackground();
+
+    /**
+     *
+     * @param sharingPermissions sharing permissions.
+     */
+    void setSharingPermissions(int sharingPermissions);
 }
 
