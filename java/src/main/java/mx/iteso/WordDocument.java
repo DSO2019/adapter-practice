@@ -21,6 +21,8 @@ public class WordDocument implements IWordDocument {
     */
     public WordDocument(final int licenseNum) {
         this.license = new MSLicense(licenseNum);
+        this.format = new Format();
+        this.background = new Image("image.png");
     }
 
     /**

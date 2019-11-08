@@ -13,6 +13,13 @@ public class GoogleToWord implements IWordDocument {
     /** Google document to be converted. */
     private IGoogleDoc googleDoc;
 
+    /** Constructor.
+     * @param incomingGoogleDoc google doc.
+    */
+    public GoogleToWord(final IGoogleDoc incomingGoogleDoc) {
+        this.googleDoc = incomingGoogleDoc;
+    }
+
     /**
      * Font getter.
      * @return the current Font.
@@ -64,6 +71,6 @@ public class GoogleToWord implements IWordDocument {
      * @return if permission should be restricted.
      */
     public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
-        return msLicense.isValid();
+        return !msLicense.isValid();
     }
 }

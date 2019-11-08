@@ -13,6 +13,13 @@ public class WordToGoogle implements IGoogleDoc {
     /** Word Document to be adapted. */
     private IWordDocument wordDocument;
 
+    /** Constructor.
+     * @param incomingWordDoc google doc.
+    */
+    public WordToGoogle(final IWordDocument incomingWordDoc) {
+        this.wordDocument = incomingWordDoc;
+    }
+
     /** Font getter.
      * @return the actual Font.
      */
