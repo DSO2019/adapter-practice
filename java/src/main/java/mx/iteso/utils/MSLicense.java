@@ -1,28 +1,36 @@
 package mx.iteso.utils;
 
+/** MS License class. */
 public class MSLicense {
+    /** license attribute. */
     private int licenseNumber = -1;
 
+    /** Constructor.
+     * @param num num.
+     */
     public MSLicense(final int num) {
         this.licenseNumber = num;
     }
 
-    /**
+    /** Get license number.
      * @return the licenseNumber
      */
     public int getLicenseNumber() {
         return licenseNumber;
     }
 
-    /**
-     * @param licenseNumber the licenseNumber to set
+    /** Set license.
+     * @param newLicenseNumber the licenseNumber to set
      */
-    public void setLicenseNumber(int licenseNumber) {
-        this.licenseNumber = licenseNumber;
+    public void setLicenseNumber(final int newLicenseNumber) {
+        this.licenseNumber = newLicenseNumber;
     }
 
+    /** Is valid.
+     * @return license number.
+     */
     public boolean isValid() {
-        final int ZERO = 0;
-        return this.licenseNumber > ZERO;
+        final int zero = 0;
+        return this.licenseNumber > zero;
     }
 }

@@ -36,7 +36,7 @@ public class WordDocumentTest {
 
     @Test
     public void testLicenseIsInvalid() {
-        assertFalse(this.wordDocument.restrictEditIfLicenseIsInvalid(this.wordDocument.getLicense()));
+        assertFalse(this.wordDocument.restrictEditIfLicenseIsInvalid());
     }
 
 }

@@ -1,14 +1,19 @@
 package mx.iteso.utils;
 
+/** Image class. */
 public class Image {
+    /** Url attribute. */
     private String url;
 
-	public Image(final String imageUrl) {
+    /** Constructor.
+     * @param imageUrl image url.
+     */
+    public Image(final String imageUrl) {
         this.url = imageUrl;
     }
-    
-    /**
-     * @return the url
+
+    /** Get url.
+     * @return the url.
      */
     public String getUrl() {
         return this.url;

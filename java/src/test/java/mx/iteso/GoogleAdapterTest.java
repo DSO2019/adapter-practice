@@ -32,7 +32,7 @@ public class GoogleAdapterTest {
 
     @Test
     public void testLicenseIsInvalid() {
-        assertFalse(this.newWordDocument.restrictEditIfLicenseIsInvalid(this.newWordDocument.getLicense()));
+        assertFalse(this.newWordDocument.restrictEditIfLicenseIsInvalid());
     }
 
 }

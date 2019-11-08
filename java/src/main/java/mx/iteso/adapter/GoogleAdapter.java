@@ -48,10 +48,9 @@ public class GoogleAdapter implements IWordDocument {
     }
 
     /** Is invalid.
-     * @param msLicense license.
      * @return is valid.
      */
-    public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
-        return !msLicense.isValid();
+    public boolean restrictEditIfLicenseIsInvalid() {
+        return !this.getLicense().isValid();
     }
 }
