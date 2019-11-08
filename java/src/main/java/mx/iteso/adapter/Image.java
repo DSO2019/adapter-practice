@@ -12,11 +12,11 @@ public class Image {
      * @param nWidth Width.
      * @param nHeight Height.
      */
-    public Image(String nPath, float nWidth, float nHeight){
+    public Image(final String nPath, final float nWidth, final float nHeight) {
         this.path = nPath;
         this.width = nWidth;
         this.height = nHeight;
-    } 
+    }
     /**
      * @return path to image.
      */

@@ -2,19 +2,23 @@ package mx.iteso.adapter;
 /** MSLicense class. */
 public class MSLicense {
     /**Supported string. */
-    String supported;
+    private String supported;
     /**Current version. */
-    float version;
+    private float version;
+    /**older version. */
+    private static final float OLDER = 12.0f;
+    /**newer version. */
+    private static final float NEWER = 16.0f;
     /**Constructor.
      * @param nVersion version.
      */
-    public MSLicense(float nVersion){
+    public MSLicense(final float nVersion) {
         this.version = nVersion;
-        if(nVersion <= 12.0) {
+        if (nVersion <= OLDER) {
             supported = "Old version, no support";
-        } else if (nVersion > 12.0 && nVersion <= 16.0){
+        } else if (nVersion > OLDER && nVersion <= NEWER) {
             supported = "Older version, still supported";
-        } else if (nVersion > 16.0) {
+        } else if (nVersion > NEWER) {
             supported = "Current stable version";
         } else {
             supported = "Invalid License";
@@ -23,13 +27,19 @@ public class MSLicense {
     /**
      * @return version.
      */
-    public float getVersion(){
+    public float getVersion() {
         return this.version;
     }
     /**
      * @return supported string.
      */
-    public String isSupported(){
+    public String isSupported() {
+        return this.supported;
+    }
+    /**
+     * @return supported string.
+     */
+    public String getSupported() {
         return this.supported;
     }
 }

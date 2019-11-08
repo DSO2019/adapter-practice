@@ -12,11 +12,12 @@ public class BackgroundImage {
      * @param nWidth Width.
      * @param nHeight Height.
      */
-    public BackgroundImage(String nPath, int nWidth, int nHeight){
+    public BackgroundImage(final String nPath,
+    final int nWidth, final int nHeight) {
         this.path = nPath;
         this.width = nWidth;
         this.height = nHeight;
-    } 
+    }
     /**
      * @return path to image.
      */
