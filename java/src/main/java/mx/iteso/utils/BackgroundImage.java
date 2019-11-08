@@ -16,7 +16,7 @@ public class BackgroundImage {
      * @return the img
      */
     public Image getImage() {
-        return img;
+        return this.img;
     }
 
 }

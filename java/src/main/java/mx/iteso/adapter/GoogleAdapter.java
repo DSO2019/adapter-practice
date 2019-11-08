@@ -5,32 +5,53 @@ import mx.iteso.utils.Format;
 import mx.iteso.utils.Image;
 import mx.iteso.utils.MSLicense;
 
+/** GoogleAdapter class. */
 public class GoogleAdapter implements IWordDocument {
 
+    /** google document attribute. */
     private IGoogleDoc googleDocument;
 
-    public GoogleAdapter(GoogleDocument googleDocument) {
-        this.googleDocument = googleDocument;
+    /** Google adapter constructor.
+     * @param newGoogleDocument google document.
+    */
+    public GoogleAdapter(final GoogleDocument newGoogleDocument) {
+        this.googleDocument = newGoogleDocument;
     }
 
+    /** Get format.
+     * @return format.
+     */
     public Format getFormat() {
         return this.googleDocument.getStyle();
     }
 
+    /** Get background.
+     * @return background.
+     */
     public Image getBackground() {
         return this.googleDocument.getBackground().getImage();
     }
 
+    /** Set office version.
+     * @param msOfficeVersion office version.
+    */
     public void setMSOfficeVersion(final float msOfficeVersion) {
         return;
     }
 
+    /** Get license.
+     * @return license.
+     */
     public MSLicense getLicense() {
-        return this.googleDocument.getSharingPermissions() == 1 ? 
-        new MSLicense(1) : new MSLicense(-1);
+        return this.googleDocument.getSharingPermissions() == 1
+        ? new MSLicense(1) : new MSLicense(-1);
     }
 
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense) {
-        return msLicense.isValid();
+    /** Is invalid.
+     * @param msLicense license.
+     * @return is valid.
+     */
+    public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
+        return !msLicense.isValid();
     }
 }
