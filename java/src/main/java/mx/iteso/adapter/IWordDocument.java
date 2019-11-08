@@ -1,12 +1,23 @@
 package mx.iteso.adapter;
 
-import java.awt.*;
-
+/** Word Interface.*/
 public interface IWordDocument {
-    public Object getFormat();
-    public Image getBackground();
-    public void setMSOfficeVersion(float msOfficeVersion);
-    public MSLicense getLicense();
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense);
+
+    /** @return Format.*/
+    Object getFormat();
+
+    /** @return Background.*/
+    Image getBackground();
+
+    /** @param msOfficeVersion .*/
+    void setMSOfficeVersion(float msOfficeVersion);
+
+    /** @return License.*/
+    MSLicense getLicense();
+
+    /** @return license
+     * @param msLicense
+     *  .*/
+    boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense);
 
 }
