@@ -29,7 +29,7 @@ public class WordAdapter implements IGoogleDoc {
     public WordAdapter(final IWordDocument wordDoc) {
         this.wordDocument = wordDoc;
         font = new Font("Verdana");
-        style = "bold";
+        style = "style";
         format = new Format(font, style);
     }
     /**
