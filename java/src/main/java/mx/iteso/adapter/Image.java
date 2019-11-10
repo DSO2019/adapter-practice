@@ -16,4 +16,12 @@ public class Image {
     public Image(final String imgString) {
         this.url = imgString;
     }
+
+    /**
+     * Return url.
+     * @return url.
+     */
+    public final String getUrl() {
+        return this.url;
+    }
 }

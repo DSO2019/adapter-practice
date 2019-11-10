@@ -18,6 +18,11 @@ public class WordtoGoogleAdapter implements IGoogleDoc {
     private BackgroundImage bckImg;
 
     /**
+     * Indicates the number of the license.
+     */
+    private int validLicense;
+
+    /**
      * The valid license number.
      */
     private static final int LICENSE_VALID_NUMBER = 10000;
@@ -29,6 +34,7 @@ public class WordtoGoogleAdapter implements IGoogleDoc {
     public WordtoGoogleAdapter(final WordDoc word) {
         this.worddoc = word;
         this.bckImg = new BackgroundImage(word.getBackground());
+        this.validLicense = this.worddoc.getLicense().getNumber();
     }
 
     @Override
@@ -49,12 +55,16 @@ public class WordtoGoogleAdapter implements IGoogleDoc {
 
     @Override
     public final void setSharingPermissions(final int sharingPermissions) {
-        return;
+        if (sharingPermissions == 0) {
+            this.validLicense = 0;
+        } else {
+            this.validLicense = 10001;
+        }
     };
 
     @Override
     public final int getSharingPermissions() {
-        if (this.worddoc.getLicense().getNumber()  > LICENSE_VALID_NUMBER) {
+        if (this.validLicense  > LICENSE_VALID_NUMBER) {
             return 1;
         }
         return 0;

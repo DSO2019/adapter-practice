@@ -32,6 +32,7 @@ public class GoogleDoc implements IGoogleDoc {
      */
     public GoogleDoc() {
         this.style = new Format();
+        System.out.print(this.style.getFont().getFontName());
         this.font = this.style.getFont();
         this.bckImage = new BackgroundImage(new Image("img.png"));
         this.shrPermissions = 1;
@@ -54,7 +55,7 @@ public class GoogleDoc implements IGoogleDoc {
 
     @Override
     public final void setSharingPermissions(final int sharingPermissions) {
-        this.shrPermissions = SharingPermissions;
+        this.shrPermissions = sharingPermissions;
     }
 
     @Override

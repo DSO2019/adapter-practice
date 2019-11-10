@@ -22,7 +22,7 @@ public class Format {
      */
     public Format() {
         int fontSize = DEFAULT_SIZE;
-        this.font = new Font("Arial", Font.PLAIN, fontSize);
+        this.font = new Font("Ubuntu", Font.PLAIN, fontSize);
 
     }
 
