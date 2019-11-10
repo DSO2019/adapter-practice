@@ -1,40 +1,64 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.IGoogleDoc;
-import java.awt.*;
-import mx.iteso.adapter.BackgroundImage;
-import mx.iteso.adapter.Format;
 
+import java.awt.Font;
+
+/**
+ * A google document.
+ */
 public class GoogleDoc implements IGoogleDoc {
+    /**
+     * The font of the document.
+     */
     private Font font;
+
+    /**
+     * The background image.
+     */
     private BackgroundImage bckImage;
+
+    /**
+     * The style the document.
+     */
     private Format style;
+
+    /**
+     * The sharing permission.
+     */
     private int shrPermissions;
 
-    public GoogleDoc(){
+    /**
+     * Creator.
+     */
+    public GoogleDoc() {
         this.style = new Format();
         this.font = this.style.getFont();
         this.bckImage = new BackgroundImage(new Image("img.png"));
         this.shrPermissions = 1;
     }
 
-    public Font getFont(){
+    @Override
+    public final Font getFont() {
         return this.font;
     }
 
-    public Format getStyle(){
+    @Override
+    public final Format getStyle() {
         return this.style;
     }
 
-    public BackgroundImage getBackground(){
+    @Override
+    public final BackgroundImage getBackground() {
         return this.bckImage;
     }
 
-    public void setSharingPermissions(int SharingPermissions){
+    @Override
+    public final void setSharingPermissions(final int sharingPermissions) {
         this.shrPermissions = SharingPermissions;
     }
 
-    public int getSharingPermissions(){
+    @Override
+    public final int getSharingPermissions() {
         return this.shrPermissions;
     }
 

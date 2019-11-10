@@ -1,34 +1,74 @@
 package mx.iteso.adapter;
-import mx.iteso.adapter.IWordDocument;
 
-public class WordDoc implements IWordDocument{
+/**
+ * A word document.
+ */
+public class WordDoc implements IWordDocument {
+    /**
+     * The format of the document.
+     */
     private Format format;
+
+    /**
+     * The image of the document.
+     */
     private Image img;
+
+    /**
+     * The license of microsoft.
+     */
     private MSLicense license;
+
+    /**
+     * The version of the document.
+     */
     private double version;
 
+    /**
+     * The recent version of the document.
+     */
+    private static final double RECENT_VERSION = 1.1;
 
-    public WordDoc(int lscNumber){
+    /**
+     * The valid license number.
+     */
+    private static final int LICENSE_VALID_NUMBER = 10000;
+
+
+    /**
+     * Creator.
+     * @param lscNumber the license number.
+     */
+    public WordDoc(final int lscNumber) {
         this.format = new Format();
         this.img = new Image("img.png");
         this.license = new MSLicense(lscNumber);
-        this.version = 1.1;
+        this.version = RECENT_VERSION;
     }
 
-    public Format getFormat(){
+    @Override
+    public final Format getFormat() {
         return this.format;
     }
-    public Image getBackground(){
+
+    @Override
+    public final Image getBackground() {
         return this.img;
     }
-    public void setMSOfficeVersion(float msOfficeVersion){
+
+    @Override
+    public final void setMSOfficeVersion(final float msOfficeVersion) {
         this.version = msOfficeVersion;
     }
-    public MSLicense getLicense(){
+
+    @Override
+    public final MSLicense getLicense() {
         return this.license;
     }
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense){
-        if(msLicense.getNumber() > 10000){
+
+    @Override
+    public final boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
+        if (msLicense.getNumber() > LICENSE_VALID_NUMBER) {
             return false;
         }
         return true;

@@ -1,15 +1,27 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.Image;
-
+/**
+ * A background image.
+ */
 public class BackgroundImage {
+    /**
+     * The real image.
+     */
     private Image img;
 
-    public BackgroundImage(Image imgBck){
+    /**
+     * Creator.
+     * @param imgBck the image;
+     */
+    public BackgroundImage(final Image imgBck) {
         this.img = imgBck;
     }
 
-    public Image getImage(){
+    /**
+     * Return the image.
+     * @return the image.
+     */
+    public final Image getImage() {
         return this.img;
     }
 }

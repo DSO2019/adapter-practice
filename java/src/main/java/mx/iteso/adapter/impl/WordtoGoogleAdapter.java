@@ -1,38 +1,60 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.WordDoc;
-import mx.iteso.adapter.IGoogleDoc;
-import mx.iteso.adapter.BackgroundImage;
-import mx.iteso.adapter.Format;
-import java.awt.*;
 
+import java.awt.Font;
+
+/**
+ * Word to Googel Adapter.
+ */
 public class WordtoGoogleAdapter implements IGoogleDoc {
-    WordDoc worddoc;
-    BackgroundImage bckImg;
+    /**
+     * The word doc.
+     */
+    private WordDoc worddoc;
 
-    public WordtoGoogleAdapter(WordDoc word){
+    /**
+     * The background image.
+     */
+    private BackgroundImage bckImg;
+
+    /**
+     * The valid license number.
+     */
+    private static final int LICENSE_VALID_NUMBER = 10000;
+
+    /**
+     * Creator.
+     * @param word to adapt.
+     */
+    public WordtoGoogleAdapter(final WordDoc word) {
         this.worddoc = word;
         this.bckImg = new BackgroundImage(word.getBackground());
     }
 
-    public Font getFont(){
+    @Override
+    public final Font getFont() {
         Format temp = this.worddoc.getFormat();
         return temp.getFont();
     };
 
-    public Format getStyle(){
+    @Override
+    public final Format getStyle() {
         return this.worddoc.getFormat();
     }
 
-    public BackgroundImage getBackground(){
+    @Override
+    public final BackgroundImage getBackground() {
         return this.bckImg;
     };
 
-    public void setSharingPermissions(int SharingPermissions){
+    @Override
+    public final void setSharingPermissions(final int sharingPermissions) {
         return;
     };
-    public int getSharingPermissions(){
-        if(this.worddoc.getLicense().getNumber()  > 10000){
+
+    @Override
+    public final int getSharingPermissions() {
+        if (this.worddoc.getLicense().getNumber()  > LICENSE_VALID_NUMBER) {
             return 1;
         }
         return 0;

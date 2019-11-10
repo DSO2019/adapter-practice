@@ -1,37 +1,59 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.IWordDocument;
-import mx.iteso.adapter.GoogleDoc;
-
+/**
+ * Google to Word Adapter.
+ */
 public class GoogleToWordAdapter implements IWordDocument {
-    GoogleDoc googledoc;
+    /**
+     * The google doc.
+     */
+    private GoogleDoc googledoc;
 
-    public GoogleToWordAdapter(GoogleDoc google){
+    /**
+     * Number of valid license.
+     */
+    private static final int LICENSE_VALID_NUMBER = 10000;
+
+    /**
+     * Number of invalid license.
+     */
+    private static final int LICENSE_INVALID_NUMBER = 10001;
+
+    /**
+     * Creator.
+     * @param google to adapt.
+     */
+    public GoogleToWordAdapter(final GoogleDoc google) {
         this.googledoc = google;
     }
 
-    public Format getFormat(){
+    @Override
+    public final Format getFormat() {
         return this.googledoc.getStyle();
     }
 
-    
-    public Image getBackground(){
+    @Override
+    public final Image getBackground() {
         return this.googledoc.getBackground().getImage();
     }
 
     @Override
-    public void setMSOfficeVersion(float msOfficeVersion){
+    public final void setMSOfficeVersion(final float msOfficeVersion) {
         return;
     }
-    public MSLicense getLicense(){
-        if(googledoc.getSharingPermissions() == 1){
-            return new MSLicense(10001);
+
+    @Override
+    public final MSLicense getLicense() {
+        if (googledoc.getSharingPermissions() == 1) {
+            return new MSLicense(LICENSE_INVALID_NUMBER);
         }
         return new MSLicense(0);
 
     }
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense){
-        if(msLicense.getNumber() > 10000){
+
+    @Override
+    public final boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense) {
+        if (msLicense.getNumber() > LICENSE_VALID_NUMBER) {
             return false;
         }
         return true;
