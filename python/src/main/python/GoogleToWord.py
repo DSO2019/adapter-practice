@@ -7,7 +7,7 @@ from MSLicense import *
 
 
 class GoogleToWord (IWordDocument):
-    def GoogleToWord(self, incomingGoogleDoc):
+    def __init__(self, incomingGoogleDoc):
         self.googleDoc = incomingGoogleDoc
 
     def getFont(self):
@@ -31,4 +31,4 @@ class GoogleToWord (IWordDocument):
             return MSLicense(invalidNumber)
 
     def restrictEditIfLicenseIsInvalid(self, msLicense):
-        return not(self.msLicense.isValid())
+        return not(msLicense.isValid())

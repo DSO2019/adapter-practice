@@ -7,7 +7,7 @@ from Font import *
 class GoogleDoc(IGoogleDoc):
 
     def __init__(self):
-        self.sharingPermission = 1
+        sharingPermission = 1
         self.style = Format()
         self.font = self.style.getFont()
         self.backgroundImage = BackgroundImage()

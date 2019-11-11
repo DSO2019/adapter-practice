@@ -7,9 +7,9 @@ from MSLicense import *
 class WordDocument(IWordDocument):
 
     def __init__(self, licenseNum):
-        self.license = new MSLicense(licenseNum)
-        self.format = new Format(self)
-        self.background = new Image("image.png")
+        self.license = MSLicense(licenseNum)
+        self.format = Format()
+        self.background = Image("image.png")
 
     def getFormat(self):
         return self.format
@@ -33,7 +33,7 @@ class WordDocument(IWordDocument):
         return self.license
 
     def setLicense(self, license):
-        self.license = lic
+        self.license = license
 
     def restrictEditIfLicenseIsInvalid(self, msLicense):
-        return not(self.license.isValid(self))
+        return not(self.license.isValid())
