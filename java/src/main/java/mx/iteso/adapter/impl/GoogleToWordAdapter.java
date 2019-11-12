@@ -45,7 +45,7 @@ public class GoogleToWordAdapter implements IWordDocument {
     @Override
     public final MSLicense getLicense() {
         if (googledoc.getSharingPermissions() == 1) {
-            return new MSLicense(LICENSE_INVALID_NUMBER);
+            return new MSLicense(LICENSE_VALID_NUMBER + 1);
         }
         return new MSLicense(0);
 
