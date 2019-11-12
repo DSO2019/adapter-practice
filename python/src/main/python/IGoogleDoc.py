@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class IGoogleDoc(ABC):
 
     @abstractmethod
@@ -9,7 +10,7 @@ class IGoogleDoc(ABC):
     @abstractmethod
     def getStyle(self):
         pass
-    
+
     @abstractmethod
     def getBackground(self):
         pass
