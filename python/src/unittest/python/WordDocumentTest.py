@@ -1,6 +1,5 @@
 import unittest
-from Documents import WordDocument
-from BaseModule import *
+from src.main.python.Documents import WordDocument
 
 
 class WordDocumentTest(unittest.TestCase):

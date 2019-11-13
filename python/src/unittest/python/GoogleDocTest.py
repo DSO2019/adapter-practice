@@ -1,6 +1,5 @@
 import unittest
-from Documents import GoogleDoc
-from BaseModule import *
+from src.main.python.Documents import GoogleDoc
 
 
 class GoogleDocTest(unittest.TestCase):

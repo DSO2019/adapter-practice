@@ -1,7 +1,6 @@
 import unittest
-from Documents import WordDocument
-from Adapters import WordDocumentAdapter
-from BaseModule import *
+from src.main.python.Documents import WordDocument
+from src.main.python.Adapters import WordDocumentAdapter
 
 
 class WordDocumentAdapterTest(unittest.TestCase):
