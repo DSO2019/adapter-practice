@@ -1,35 +1,55 @@
 package mx.iteso.adapter.googledoc;
 
+import mx.iteso.adapter.Format;
 import mx.iteso.adapter.Image;
 import mx.iteso.adapter.word.MSLicense;
 import mx.iteso.adapter.word.WordDocument;
 
+/**
+ * GoogleDocAdapter Class.
+ */
 public class GoogleDocAdapter extends WordDocument {
+    /**
+     * Attr type GoogleDoc.
+     */
     private GoogleDoc mGoogleDoc;
-    public GoogleDocAdapter(GoogleDoc newGoogleDoc) {
+    /**
+     * Public constructor.
+     * @param newGoogleDoc google doc for adapter.
+     */
+    public GoogleDocAdapter(final GoogleDoc newGoogleDoc) {
+        super();
         this.mGoogleDoc = newGoogleDoc;
+        setMSOfficeVersion(mGoogleDoc.getSharingPermissions());
     }
-
+    /**
+     * Background image getter.
+     * @return Background image for WordDocument.
+     */
     @Override
     public Image getBackground() {
-        return super.getBackground();
+        return mGoogleDoc.getBackground();
     }
-
+    /**
+     * MSLicense getter.
+     * @return MSLicense from the GoogleDoc.
+     */
     @Override
     public MSLicense getLicense() {
         return super.getLicense();
     }
-
+    /**
+     * Format getter.
+     * @return Format getter from the GoogleDoc.
+     */
     @Override
-    public Object getFormat() {
-        return super.getFormat();
+    public Format getFormat() {
+        return new Format(mGoogleDoc.getFont());
     }
-
-    @Override
-    public void setMSOfficeVersion(float msOfficeVersion) {
-        super.setMSOfficeVersion(msOfficeVersion);
-    }
-
+    /**
+     * Check if is valid license.
+     * @return isValid.
+     */
     @Override
     public boolean restrictEditIfLicenseIsInvalid() {
         return super.restrictEditIfLicenseIsInvalid();
