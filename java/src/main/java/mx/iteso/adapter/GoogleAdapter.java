@@ -19,7 +19,7 @@ public class GoogleAdapter implements IWordDocument {
     }
 
     /** @return Format. */
-    public Object getFormat() {
+    public Format getFormat() {
         return new Format(doc.getFont());
     }
 

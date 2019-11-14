@@ -27,7 +27,6 @@ namespace Adapter.Clases
             _msVersion = msOfficeVersion;
         }
 
-        
         public float GetMsOfficeVersion() {
             return _msVersion;
         }

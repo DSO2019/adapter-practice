@@ -31,7 +31,7 @@ public class WordDocument implements IWordDocument {
     }
 
     /** @return Format.*/
-    public Object getFormat() {
+    public Format getFormat() {
         return this.format;
     }
 
