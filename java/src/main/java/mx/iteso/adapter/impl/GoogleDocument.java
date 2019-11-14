@@ -8,8 +8,17 @@ import java.awt.*;
 
 
 public class GoogleDocument implements IGoogleDoc {
+    /**
+     * Font.
+     */
     private Font font;
+    /**
+     * Style.
+     */
     private Format style;
+    /**
+     * Image.
+     */
     private Image image;
 
     /**

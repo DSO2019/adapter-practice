@@ -23,7 +23,7 @@ public class Format {
      * @param name of font.
      * @param size of font.
      */
-    public Format(String name, int size) {
+    public Format(final String name, final int size) {
         /**
          * Font's name.
          */

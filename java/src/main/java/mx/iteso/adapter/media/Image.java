@@ -21,7 +21,7 @@ public class Image {
      * @param width of the image
      * @param length of the image
      */
-    public Image(String content, int width, int length) {
+    public Image(final String content, final int width, final int length) {
         this.content = content;
         this.length = length;
         this.width = width;
@@ -32,7 +32,7 @@ public class Image {
      * @param width new pixel count.
      * @param length new pixel count.
      */
-    public void reshape(int width, int length) {
+    public void reshape(final int width, final int length) {
         this.width = width;
         this.length = length;
     }
