@@ -8,9 +8,23 @@ import mx.iteso.adapter.impl.ints.IWordDocument;
 import mx.iteso.adapter.impl.other.MSLicense;
 import mx.iteso.adapter.impl.other.Image;
 
+/**
+ * Test class.
+ */
 public class TestDriveAdapters {
-
-    public static void main(String [] args){
+    /**
+     * Magic number one.
+     */
+    public static final int A = 452;
+    /**
+     * Magic number two.
+     */
+    public static final int B = 612;
+        /**
+     * Main class.
+     * @param args Arguments.
+     */
+    public static void main(final String[] args) {
         IWordDocument wd = new WordDoc();
         IGoogleDoc gd = new GoogleDoc();
 
@@ -20,18 +34,19 @@ public class TestDriveAdapters {
         Image background;
         MSLicense license;
         boolean edit;
+
+
         //Word Document
         format = wd.getFormat();
         background = wd.getBackground();
         license = wd.getLicense();
         edit = wd.restrictEditIfLicenseIsInvalid(license);
-        wd.setMSOfficeVersion(452);
+        wd.setMSOfficeVersion(A);
         //Converted GD to WD
         format = convertedToWD.getFormat();
         background = convertedToWD.getBackground();
         license = convertedToWD.getLicense();
         edit = convertedToWD.restrictEditIfLicenseIsInvalid(license);
-        convertedToWD.setMSOfficeVersion(612);
-
+        convertedToWD.setMSOfficeVersion(B);
     }
 }

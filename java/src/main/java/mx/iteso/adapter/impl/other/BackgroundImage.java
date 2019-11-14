@@ -1,7 +1,11 @@
 package mx.iteso.adapter.impl.other;
-
+/**
+ * Background Image class.
+ */
 public class BackgroundImage {
-    public BackgroundImage(){
-
-    }    
+    /**
+     * Constructor.
+     */
+    public BackgroundImage() {
+    }
 }

@@ -1,13 +1,22 @@
 package mx.iteso.adapter.impl.other;
-
+/**
+ * MSLicense class.
+ */
 public class MSLicense {
+    /**
+     * Validation bool.
+     */
     private boolean validation;
-
-    public MSLicense(){
+    /**
+     * Constructor.
+     */
+    public MSLicense() {
         validation = true;
     }
-    
-    public boolean isValid(){
+    /**
+     * @return validation. Returns validation.
+     */
+    public boolean isValid() {
         return validation;
     }
 }

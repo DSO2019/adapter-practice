@@ -1,7 +1,11 @@
 package mx.iteso.adapter.impl.other;
-
-public class Image{
-    public Image(){
-        
+/**
+ * Image class.
+ */
+public class Image {
+    /**
+     * Constructor.
+     */
+    public Image() {
     }
 }
