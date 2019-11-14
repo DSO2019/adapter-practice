@@ -1,0 +1,14 @@
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\adapter-practice.deps.json
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\adapter-practice.runtimeconfig.json
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\adapter-practice.runtimeconfig.dev.json
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\adapter-practice.dll
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.csprojAssemblyReference.cache
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.csproj.CoreCompileInputs.cache
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.AssemblyInfoInputs.cache
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.AssemblyInfo.cs
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Otono2019\adapter-practice\csharp\adapter-practice\bin\Debug\netcoreapp2.1\adapter-practice.pdb
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.dll
+C:\Otono2019\adapter-practice\csharp\adapter-practice\obj\Debug\netcoreapp2.1\adapter-practice.pdb
