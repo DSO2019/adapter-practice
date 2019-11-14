@@ -7,6 +7,8 @@ public class GoogleDoc implements IGoogleDoc {
     private int sharingPermissions;
     /**Font. */
     private Font font;
+    /**Style using format class. */
+    private Format style;
     /**Background image. */
     private BackgroundImage bImage;
     /**font size. */
@@ -20,6 +22,7 @@ public class GoogleDoc implements IGoogleDoc {
         this.font = new Font("TimesRoman", Font.PLAIN, FONT_SIZE);
         this.bImage = new BackgroundImage("bgImage.jpg",
         IMAGE_WIDTH, IMAGE_HEIGHT);
+        this.style = new Format("Arial", 12);
     }
     /**
      * @return font.
@@ -28,10 +31,10 @@ public class GoogleDoc implements IGoogleDoc {
         return this.font;
     }
     /**
-     * @return null.
+     * @return style.
      */
-    public Object getStyle() {
-        return null;
+    public Format getStyle() {
+        return this.style;
     }
     /**
      * @return background image.

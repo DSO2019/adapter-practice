@@ -1,4 +1,5 @@
 package mx.iteso.adapter;
+
 /**Word document class. */
 public class WordDocument implements IWordDocument {
     /**MSOfficeVersion. */
@@ -7,7 +8,8 @@ public class WordDocument implements IWordDocument {
     private MSLicense msLicense;
     /**Image. */
     private Image image;
-    /**Constructor. */
+    /**Format. */
+    private Format format;
     /**image width. */
     private static final float IMAGE_WIDTH = 1024.0f;
     /**image height. */
@@ -15,12 +17,14 @@ public class WordDocument implements IWordDocument {
     /**Constructor. */
     public WordDocument() {
         this.image = new Image("image", IMAGE_WIDTH, IMAGE_HEIGHT);
+        this.format = new Format("Arial", 12);
+        this.msLicense = new MSLicense(16.0f);
     }
     /**
-     * @return null.
+     * @return format.
     */
-    public Object getFormat() {
-        return null;
+    public Format getFormat() {
+        return this.format;
     }
     /**
      * @return background.
@@ -47,6 +51,7 @@ public class WordDocument implements IWordDocument {
      * @return if license is valid or not.
     */
     public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLicense2) {
+        this.msLicense = msLicense2;
         return msLicense2.isSupported() == "Current stable version"
         || msLicense2.isSupported() == "Older version, still supported";
     }

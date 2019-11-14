@@ -36,10 +36,4 @@ public class MSLicense {
     public String isSupported() {
         return this.supported;
     }
-    /**
-     * @return supported string.
-     */
-    public String getSupported() {
-        return this.supported;
-    }
 }
