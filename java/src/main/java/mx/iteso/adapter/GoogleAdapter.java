@@ -1,34 +1,56 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.IWordDocument;
-import mx.iteso.adapter.IGoogleDoc;
+import mx.iteso.GoogleDocument;
+import mx.iteso.utils.Format;
+import mx.iteso.utils.Image;
+import mx.iteso.utils.MSLicense;
 
+/** GoogleAdapter class. */
 public class GoogleAdapter implements IWordDocument {
-    IGoogleDoc googledoc;
 
-    public GoogleAdapter(IGoogleDoc google){
-        this.googledoc = google;
+    /** google document attribute. */
+    private IGoogleDoc googleDocument;
+
+    /** Google adapter constructor.
+     * @param newGoogleDocument google document.
+    */
+    public GoogleAdapter(final GoogleDocument newGoogleDocument) {
+        this.googleDocument = newGoogleDocument;
     }
 
-    public Object getFormat(){
-        this.googledoc.getStyle();
+    /** Get format.
+     * @return format.
+     */
+    public Format getFormat() {
+        return this.googleDocument.getStyle();
     }
 
-    
-    public Image getBackground(){
-        this.googledoc.getBackground();
+    /** Get background.
+     * @return background.
+     */
+    public Image getBackground() {
+        return this.googleDocument.getBackground().getImage();
     }
 
-    @Override
-    public void setMSOfficeVersion(float msOfficeVersion){
+    /** Set office version.
+     * @param msOfficeVersion office version.
+    */
+    public void setMSOfficeVersion(final float msOfficeVersion) {
         return;
     }
-    public MSLicense getLicense(){
-        return new MSLicense();
 
-    }
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense){
-        return !msLicense.isValid();
+    /** Get license.
+     * @return license.
+     */
+    public MSLicense getLicense() {
+        return this.googleDocument.getSharingPermissions() == 1
+        ? new MSLicense(1) : new MSLicense(-1);
     }
 
+    /** Is invalid.
+     * @return is valid.
+     */
+    public boolean restrictEditIfLicenseIsInvalid() {
+        return !this.getLicense().isValid();
+    }
 }

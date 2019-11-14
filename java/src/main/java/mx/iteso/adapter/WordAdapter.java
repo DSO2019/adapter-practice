@@ -1,30 +1,56 @@
 package mx.iteso.adapter;
 
-import mx.iteso.adapter.IWordDocument;
-import mx.iteso.adapter.IGoogleDoc;
+import java.awt.Font;
 
+import mx.iteso.WordDocument;
+import mx.iteso.utils.BackgroundImage;
+import mx.iteso.utils.Format;
+
+/** Word Adapter class. */
 public class WordAdapter implements IGoogleDoc {
-    IWordDocument worddoc;
 
-    public void GoogleAdapter(IGoogleDoc google){
-        this.googledoc = google;
+    /** Word document attribute. */
+    private IWordDocument wordDocument;
+
+    /** Word adapter constructor.
+     * @param wordDoc word document.
+     */
+    public WordAdapter(final WordDocument wordDoc) {
+        this.wordDocument = wordDoc;
     }
 
-    public Object getStyle(){
-        this.worddoc.getFormat();
+    /** Get font.
+     * @return font.
+     */
+    public Font getFont() {
+        return this.wordDocument.getFormat().getFont();
     }
 
-    @Override
-    public Image getBackground(){
-        this.worddoc.getBackground();
+    /** Get style.
+     * @return format.
+     */
+    public Format getStyle() {
+        return this.wordDocument.getFormat();
     }
 
-    public Font getFont(){
-        return new Font();
-    };
-    
-    public void setSharingPermissions(int SharingPermissions){
+    /** Get background.
+     * @return background.
+     */
+    public BackgroundImage getBackground() {
+        return new BackgroundImage(this.wordDocument.getBackground());
+    }
+
+    /** Set sharing permissions.
+     * @param sharingPermissions sharing permissions.
+     */
+    public void setSharingPermissions(final int sharingPermissions) {
         return;
-    };
+    }
 
+    /** Get sharing permissions.
+     * @return sharing permissions.
+     */
+    public int getSharingPermissions() {
+        return this.wordDocument.restrictEditIfLicenseIsInvalid() ? 0 : 1;
+    }
 }

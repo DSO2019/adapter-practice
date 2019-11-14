@@ -1,0 +1,3 @@
+Notes:
+-There are 13 checkstyle maven reports that are not really valid.
+-Some coverage results are under 70 percent because of the amount of methods of each class.
