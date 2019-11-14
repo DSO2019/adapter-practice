@@ -52,5 +52,4 @@ public class WordAdapter implements IGoogleDoc {
         word.getLicense();
         word.restrictEditIfLicenseIsInvalid(ms);
     }
-
 }
