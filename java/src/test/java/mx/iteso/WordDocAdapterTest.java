@@ -7,11 +7,9 @@ import org.junit.*;
 public class WordDocAdapterTest {
     WordDocAdapter wordDocAdapter;
     WordDocument mockedWordDoc;
-    Format format;
     @Before
     public void setUp(){
         mockedWordDoc = new WordDocument();
-        format = mockedWordDoc.getFormat();
         wordDocAdapter = new WordDocAdapter(mockedWordDoc);
 
     }
@@ -19,7 +17,7 @@ public class WordDocAdapterTest {
     @Test
     public void getFontTest() {
         Font result = wordDocAdapter.getFont();
-
+        Assert.assertSame(result.getFont(),"Arial");
 
     }
 
@@ -39,6 +37,5 @@ public class WordDocAdapterTest {
     @Test
     public void setSharingPermissionsTest() {
         wordDocAdapter.setSharingPermissions(3);
-
     }
 }

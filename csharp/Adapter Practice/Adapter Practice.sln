@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter Practice", "Adapter Practice.csproj", "{2450702F-570B-4D80-96BD-D696CA1777D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter Practice Test", "..\Adapter Practice Test\Adapter Practice Test.csproj", "{CDE5D1EF-5183-48A1-8DE0-E6F0FC0F2573}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2450702F-570B-4D80-96BD-D696CA1777D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2450702F-570B-4D80-96BD-D696CA1777D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2450702F-570B-4D80-96BD-D696CA1777D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2450702F-570B-4D80-96BD-D696CA1777D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE5D1EF-5183-48A1-8DE0-E6F0FC0F2573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE5D1EF-5183-48A1-8DE0-E6F0FC0F2573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE5D1EF-5183-48A1-8DE0-E6F0FC0F2573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE5D1EF-5183-48A1-8DE0-E6F0FC0F2573}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8272672C-FF06-4E8B-A935-83779F250ABE}
+	EndGlobalSection
+EndGlobal

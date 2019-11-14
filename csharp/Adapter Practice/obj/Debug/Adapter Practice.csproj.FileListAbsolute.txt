@@ -1,0 +1,6 @@
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\bin\Debug\Adapter Practice.exe.config
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\bin\Debug\Adapter Practice.exe
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\bin\Debug\Adapter Practice.pdb
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\obj\Debug\Adapter Practice.csprojAssemblyReference.cache
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\obj\Debug\Adapter Practice.exe
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice\obj\Debug\Adapter Practice.pdb

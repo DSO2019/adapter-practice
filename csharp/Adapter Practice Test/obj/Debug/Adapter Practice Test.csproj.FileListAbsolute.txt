@@ -1,0 +1,16 @@
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Adapter Practice Test.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Adapter Practice Test.pdb
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Adapter Practice.exe
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Adapter Practice.pdb
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Adapter Practice.exe.config
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\obj\Debug\Adapter Practice Test.csprojAssemblyReference.cache
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\obj\Debug\Adapter Practice Test.csproj.CopyComplete
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\obj\Debug\Adapter Practice Test.dll
+C:\Users\artur\Desktop\SD\repo\adapter-practice\csharp\Adapter Practice Test\obj\Debug\Adapter Practice Test.pdb
