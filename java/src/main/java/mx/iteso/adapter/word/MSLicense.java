@@ -1,23 +1,44 @@
 package mx.iteso.adapter.word;
 
+/**
+ * License doc.
+ */
 public class MSLicense {
 
+    /**
+     * Key to license.
+     */
     private int license = 0;
 
-    public MSLicense(final int license) {
+    /**
+     *
+     * @param version .
+     */
+    public MSLicense(final int version) {
+        this.license = version;
     }
 
-    public  int getLicense(){
+    /**
+     *
+     * @return license.
+     */
+    public  int getLicense() {
         return this.license;
     }
 
-    public void setLicense(final int l){
-        this.license = l;
+    /**
+     *
+     * @param newLicense .
+     */
+    public void setLicense(final int newLicense) {
+        this.license = newLicense;
     }
 
-    public boolean isValid(){
-        final int validate = 100;
-        return this.license >= validate;
+    /**
+     *
+     * @return if is valid or not.
+     */
+    public boolean isValid() {
+        return this.license > 0;
     }
-
 }

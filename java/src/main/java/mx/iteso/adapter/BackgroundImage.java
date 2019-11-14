@@ -1,20 +1,27 @@
 package mx.iteso.adapter;
 
-
-import java.awt.*;
-
+/**
+ * Background image Adapter.
+ */
 public class BackgroundImage {
+    /**
+     * new Image.
+     */
     private Image image;
 
-    public BackgroundImage(final float alto, final float ancho){
+    /**
+     * Background image.
+     * @param background .
+     */
+    public BackgroundImage(final Image background) {
         this.image = new Image("image.jpg");
     }
 
-    public BackgroundImage(final Image img){
-        this.image = img;
-    }
-
-    public Image getImage(){
+    /**
+     *
+     * @return img
+     */
+    public Image getImage() {
         return this.image;
     }
 }

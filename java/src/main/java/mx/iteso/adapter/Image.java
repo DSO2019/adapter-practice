@@ -1,13 +1,27 @@
 package mx.iteso.adapter;
 
+/**
+ * new image.
+ */
 public class Image {
+    /**
+     * image url.
+     */
     private String url;
 
-    public Image(final String newUrl){
+    /**
+     *
+     * @param newUrl .
+     */
+    public Image(final String newUrl) {
         this.url = newUrl;
     }
 
-    public String getUrl(){
+    /**
+     *
+     * @return ulr of image.
+     */
+    public String getUrl() {
         return this.url;
     }
 }

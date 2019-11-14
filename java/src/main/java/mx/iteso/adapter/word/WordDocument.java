@@ -3,60 +3,90 @@ package mx.iteso.adapter.word;
 import java.text.Format;
 import mx.iteso.adapter.Image;
 
-public class WordDocument implements IWordDocument{
+/**
+ * Word Doc Class.
+ */
+public class WordDocument implements IWordDocument {
+    /**
+     * License.
+     */
     private MSLicense msLicense;
-    private float msOfficeVersion;
+    /**
+     * Word Version.
+     */
+    /**
+     * Word Format.
+     */
     private Format format;
-    protected Image BackgroundImage;
+    /**
+     * Background.
+     */
+    private Image backgroundImage;
 
-    public WordDocument(final int license){
+    /**
+     *
+     * @param license .
+     * New word doc.
+     */
+    public WordDocument(final int license) {
         this.msLicense = new MSLicense(license);
-        this.format = new Format();
-        this.BackgroundImage = new Image("image.jpg");
     }
 
-    public Format getFormat() {
+    /**
+     *
+     * @return format.
+     */
+    public mx.iteso.adapter.Format getFormat() {
         return this.format;
     }
 
+    /**
+     *
+     * @return background.
+     */
     public Image getBackground() {
-        return null;
+        return this.backgroundImage;
     }
 
-    public void setMSOfficeVersion(float msOfficeVersion) {
-
+    /**
+     *
+     * @param msOfficeVersion .
+     */
+    public void setMSOfficeVersion(final float msOfficeVersion) {
+        this.msLicense = new MSLicense((int) msOfficeVersion);
     }
 
-    public void setFormat(final Format newformat) {
-        this.format = newformat;
-    }
-
-    public Image getBackgroundImage() {
-        return this.BackgroundImage;
-    }
-
-    public void setBackgroundImage(final Image img) {
-        this.BackgroundImage = this.img;
-    }
-
-    public void setMsLicense(MSLicense msLicense) {
-        this.msLicense = msLicense;
-    }
-
-    public void setMsOfficeVersion(final float msOfficeVersion) {
-        this.msOfficeVersion = msOfficeVersion;
-    }
-
+    /**
+     *
+     * @return Word Version.
+     */
     public float getMsOfficeVersion() {
         return this.msOfficeVersion;
     }
 
+    /**
+     *
+     * @param newformat .
+     */
+    public void setFormat(final Format newformat) {
+        this.format = newformat;
+    }
+
+    /**
+     *
+     * @return license.
+     */
     public MSLicense getLicense() {
         return this.msLicense;
     }
 
-
-    public boolean restrictEditIfLicenseIsInvalid(MSLicense msLicense) {
-        return false;
+    /**
+     *
+     * @return if license is valid.
+     */
+    @Override
+    public boolean restrictEditIfLicenseIsInvalid() {
+        return !this.msLicense.isValid();
     }
+
 }
