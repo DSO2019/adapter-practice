@@ -1,0 +1,4 @@
+C:\Users\Bernardo Elizondo\Desktop\adapter-practice\csharp\adapter_practice\bin\Debug\netcoreapp3.0\adapter_practice.exe
+C:\Users\Bernardo Elizondo\Desktop\adapter-practice\csharp\adapter_practice\obj\Debug\netcoreapp3.0\adapter_practice.csprojAssemblyReference.cache
+C:\Users\Bernardo Elizondo\Desktop\adapter-practice\csharp\adapter_practice\obj\Debug\netcoreapp3.0\adapter_practice.AssemblyInfoInputs.cache
+C:\Users\Bernardo Elizondo\Desktop\adapter-practice\csharp\adapter_practice\obj\Debug\netcoreapp3.0\adapter_practice.AssemblyInfo.cs
