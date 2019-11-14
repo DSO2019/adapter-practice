@@ -19,7 +19,7 @@ namespace Adapter.Clases
             _backgroundImage = bckimg;
         }
 
-        public object GetFormat() {
+        public Format GetFormat() {
             return _format;
         }
 

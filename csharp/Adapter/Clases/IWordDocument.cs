@@ -2,7 +2,7 @@ namespace Adapter.Clases
 {
     public interface IWordDocument {
 
-        object GetFormat();
+        Format GetFormat();
 
         Image GetBackground();
 

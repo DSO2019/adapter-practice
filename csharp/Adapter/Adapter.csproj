@@ -54,6 +54,7 @@
     <Compile Include="Clases\MSLicense.cs" />
     <Compile Include="Clases\WordAdapter.cs" />
     <Compile Include="Clases\WordDocument.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

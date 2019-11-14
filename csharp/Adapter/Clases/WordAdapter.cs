@@ -27,7 +27,7 @@ namespace Adapter.Clases
             return _style;
         }
 
-        public object GetFormat() {
+        public Format GetFormat() {
             return _format;
         }
 

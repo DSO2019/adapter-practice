@@ -14,7 +14,7 @@ namespace Adapter.Clases
             _msLicense = new MsLicense("Google license");
         }
 
-        public object GetFormat() {
+        public Format GetFormat() {
             return new Format(_doc.GetFont());
         }
 

@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class GoogleDocAdapterTest {
     GoogleAdapter googleDocAdapter;
     GoogleDoc mockedGoogleDoc;
@@ -53,6 +52,5 @@ public class GoogleDocAdapterTest {
         MSLicense ms = new MSLicense("Google license");
         boolean result = googleDocAdapter.restrictEditIfLicenseIsInvalid(ms);
         Assert.assertEquals(true, result);
-
     }
 }
