@@ -51,7 +51,7 @@ public class GoogleToDoc implements IWordDocument {
      *
      * @param msOfficeVersion .
      */
-    public void setMSOfficeVersion(final float msOfficeVersion) {
+    public final void setMSOfficeVersion(final float msOfficeVersion) {
         this.msVersion = msOfficeVersion;
     }
 
@@ -59,7 +59,7 @@ public class GoogleToDoc implements IWordDocument {
      *
      * @return .
      */
-    public MSLicense getLicense() {
+    public final MSLicense getLicense() {
         return this.msLicense;
     }
 
@@ -68,7 +68,7 @@ public class GoogleToDoc implements IWordDocument {
      * @param msLic .
      * @return .
      */
-    public boolean restrictEditIfLicenseIsInvalid(final MSLicense msLic) {
+    public final boolean restrictEditIfLicenseIsInvalid(final MSLicense msLic) {
         if (this.msLicense.getLicense() == msLic.getLicense()) {
             return true;
         } else {

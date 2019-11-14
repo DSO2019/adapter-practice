@@ -28,7 +28,9 @@ public class DocToGoogle implements IGoogleDoc {
     public DocToGoogle(final IWordDocument w) {
         this.word = w;
         f = (Format) word.getFormat();
-        this.sharingPermissions = 777;
+        final int numero = 777;
+
+        this.sharingPermissions = numero;
     }
 
     /**
@@ -51,7 +53,7 @@ public class DocToGoogle implements IGoogleDoc {
      *
      * @return .
      */
-    public BackgroundImage getBackground() {
+    public final BackgroundImage getBackground() {
         return new BackgroundImage(word.getBackground().getImage());
     }
 
@@ -59,7 +61,7 @@ public class DocToGoogle implements IGoogleDoc {
      *
      * @param sharingP .
      */
-    public void setSharingPermissions(int sharingP) {
+    public final void setSharingPermissions(final int sharingP) {
         this.sharingPermissions = sharingP;
     }
 }
