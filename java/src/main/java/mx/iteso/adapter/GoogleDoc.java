@@ -17,16 +17,12 @@ public class GoogleDoc implements IGoogleDoc {
     /** background image.*/
     private BackgroundImage backgroundImage;
 
-    /** @param fnt .
-     * @param bckimg .
-     * @param stl .
-     * @param permissions .*/
-    public GoogleDoc(final Font fnt, final BackgroundImage bckimg,
-        final Format stl, final int permissions) {
-        this.font = fnt;
-        this.backgroundImage = bckimg;
-        this.style = stl;
-        this.sharingPermissions = permissions;
+    /** GoogleDoc.*/
+    public GoogleDoc() {
+            this.font = new Font("Calibri");
+            this.backgroundImage = new BackgroundImage(new Image("imageUrl"));
+            this.style = new Format(this.font, "Regular");
+            this.sharingPermissions = 1;
     }
 
     /** @return Font.*/

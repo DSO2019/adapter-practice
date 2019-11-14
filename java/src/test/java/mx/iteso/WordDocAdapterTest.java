@@ -5,39 +5,36 @@ import org.junit.*;
 
 
 public class WordDocAdapterTest {
-    WordDocAdapter wordDocAdapter;
+    WordAdapter wordAdapter;
     WordDocument mockedWordDoc;
     Format format;
     @Before
     public void setUp(){
         mockedWordDoc = new WordDocument();
         format = mockedWordDoc.getFormat();
-        wordDocAdapter = new WordDocAdapter(mockedWordDoc);
+        wordAdapter = new WordAdapter(mockedWordDoc);
 
     }
 
     @Test
     public void getFontTest() {
-        Font result = wordDocAdapter.getFont();
-
-
+        Font result = wordAdapter.getFont();
     }
 
     @Test
     public void getStyleTest() {
-        String result = (String) wordDocAdapter.getStyle();
+        String result = (String) wordAdapter.getStyle();
         Assert.assertEquals("bold", result);
-
     }
 
     @Test
     public void getBackgroundTest() {
-        String backgroundImage = wordDocAdapter.getBackground().getImage().getUrl();
+        String backgroundImage = wordAdapter.getBackground().getImage().getUrl();
         Assert.assertEquals("imageUrl", backgroundImage);
     }
 
     @Test
     public void setSharingPermissionsTest() {
-        wordDocAdapter.setSharingPermissions(3);
+        wordAdapter.setSharingPermissions(3);
     }
 }

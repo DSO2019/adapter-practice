@@ -18,17 +18,12 @@ public class WordAdapter implements IGoogleDoc {
     /** Style.*/
     private String style;
 
-    /** @param word1 .
-     * @param fnt .
-     * @param fmt .
-     * @param stl .
-    */
-    public WordAdapter(final WordDocument word1, final Font fnt,
-        final Format fmt, final String stl) {
-        this.word = word1;
-        this.font = fnt;
-        this.format = fmt;
-        this.style = stl;
+    /** @param wordDoc . */
+    public WordAdapter(final WordDocument wordDoc) {
+        this.word = wordDoc;
+        font = new Font("Arial");
+        style = "bold";
+        format = new Format(font, style);
     }
 
     /** @return Font.*/

@@ -18,20 +18,16 @@ public class WordDocument implements IWordDocument {
     /** Format.*/
     private Format format;
 
-    /** @param fnt .
-     * @param bckimg .
-     * @param fmt .
-     * @param msLic .*/
-    public WordDocument(final Font fnt, final MSLicense msLic,
-        final Format fmt, final BackgroundImage bckimg) {
-        this.font = fnt;
-        this.msLicense = msLic;
-        this.format = fmt;
-        this.backgroundImage = bckimg;
+    /** WordDocument. */
+    public WordDocument() {
+        this.font = new Font("Calibri");
+        this.msLicense = new MSLicense("MS License");
+        this.format = new Format(this.font, "Bold");
+        this.backgroundImage = new BackgroundImage(new Image("imageUrl"));
     }
 
     /** @return Format.*/
-    public Object getFormat() {
+    public Format getFormat() {
         return this.format;
     }
 

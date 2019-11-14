@@ -1,6 +1,5 @@
 package mx.iteso.adapter;
 
-
 /** Format.*/
 public class Format {
 
