@@ -1,0 +1,11 @@
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\obj\Debug\netcoreapp3.0\AdapterPractice.csprojAssemblyReference.cache
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\obj\Debug\netcoreapp3.0\AdapterPractice.AssemblyInfoInputs.cache
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\obj\Debug\netcoreapp3.0\AdapterPractice.AssemblyInfo.cs
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.exe
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.deps.json
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.runtimeconfig.json
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.runtimeconfig.dev.json
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.dll
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\bin\Debug\netcoreapp3.0\AdapterPractice.pdb
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\obj\Debug\netcoreapp3.0\AdapterPractice.dll
+C:\Users\lmrod\Documents\AdapterPractica\adapter-practice\csharp\AdapterPractice\AdapterPractice\obj\Debug\netcoreapp3.0\AdapterPractice.pdb
